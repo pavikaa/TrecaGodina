@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/darkblue"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonInspiration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/yellow_700"
+        android:text="@string/inspiration"
+        android:textColor="@color/blue_grey_900" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/buttonInspiration"
+        android:focusable="false"
+        android:gravity="center"
+        android:hint="@string/top"
+        android:inputType="none"
+        android:textColorHint="@color/blue_grey_900" />
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonInspiration"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp">
+
+        <TableRow>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:background="@drawable/rounded">
+
+                <ImageView
+                    android:id="@+id/iv_tr1"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_column="0"
+                    android:layout_marginLeft="6dp"
+                    android:contentDescription="@string/einstein"
+                    android:src="@drawable/einstein" />
+
+                <TextView
+                    android:id="@+id/tv_nameTr1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/iv_tr1"
+                    android:text="@string/einstein"
+                    android:textColor="@color/blue_grey_900"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_einstein_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_nameTr1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/iv_tr1"
+                    android:text="@string/einstein_dob"
+                    android:textColor="@color/blue_grey_900" />
+
+                <TextView
+                    android:id="@+id/einstein_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_einstein_dob"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/iv_tr1"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:text="@string/einstein_info"
+                    android:textColor="@color/blue_grey_900" />
+            </RelativeLayout>
+        </TableRow>
+
+
+        <TableRow>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded">
+
+                <ImageView
+                    android:id="@+id/iv_tr2"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_column="0"
+                    android:contentDescription="@string/newton"
+                    android:src="@drawable/newton" />
+
+                <TextView
+                    android:id="@+id/tv_nameTr2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/iv_tr2"
+                    android:text="@string/newton"
+                    android:textColor="@color/blue_grey_900"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_newton_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_nameTr2"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/iv_tr2"
+                    android:text="@string/newton_dob"
+                    android:textColor="@color/blue_grey_900" />
+
+                <TextView
+                    android:id="@+id/newton_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_newton_dob"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/iv_tr2"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:text="@string/newton_info"
+                    android:textColor="@color/blue_grey_900" />
+            </RelativeLayout>
+        </TableRow>
+
+        <TableRow>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded">
+
+                <ImageView
+                    android:id="@+id/iv_tr3"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_column="0"
+                    android:contentDescription="@string/tesla"
+                    android:src="@drawable/tesla" />
+
+                <TextView
+                    android:id="@+id/tv_nameTr3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/iv_tr3"
+                    android:text="@string/tesla"
+                    android:textColor="@color/blue_grey_900"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_tesla_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_nameTr3"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/iv_tr3"
+                    android:text="@string/tesla_dob"
+                    android:textColor="@color/blue_grey_900" />
+
+                <TextView
+                    android:id="@+id/tesla_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_tesla_dob"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/iv_tr3"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:text="@string/tesla_info"
+                    android:textColor="@color/blue_grey_900" />
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/table"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:hint="@string/etDescriptionHint"
+        android:textColorHint="@color/blue_grey_900" />
+
+    <Button
+        android:id="@+id/btnDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etDescription"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="@color/yellow_700"
+        android:text="@string/etDescription"
+        android:textColor="@color/blue_grey_900" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnDescription"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rdbtnOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/einstein"
+            android:textColor="@color/blue_grey_900" />
+
+        <RadioButton
+            android:id="@+id/rdbtnTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/newton"
+            android:textColor="@color/blue_grey_900" />
+
+        <RadioButton
+            android:id="@+id/rdbtnThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/tesla"
+            android:textColor="@color/blue_grey_900" />
+
+    </RadioGroup>
+</RelativeLayout>

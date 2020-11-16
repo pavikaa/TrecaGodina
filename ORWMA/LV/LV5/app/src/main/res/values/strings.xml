@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Poznati znanstvenici</string>
+    <string name="inspiration">Inspiracija</string>
+    <string name="einstein">Albert Einstein</string>
+    <string name="einstein_dob">1879. - 1955.</string>
+    <string name="einstein_info">Albert Einstein (Ulm, 14. ožujka 1879. – Princeton, New Jersey, 18. travnja 1955.) bio je teorijski fizičar, prema jednom izboru najveći fizičar uopće. Mladost je provodio u Münchenu, Italiji i zatim u Švicarskoj, gdje je (1900.) završio studij na Tehničkoj visokoj školi u Zürichu.</string>
+    <string name="newton">Isaac Newton</string>
+    <string name="newton_dob">1643. - 1727.</string>
+    <string name="newton_info">Isaac Newton (Woolsthorpe, 25. prosinca 1642. – Kensington, 20. ožujka 1727.), engleski fizičar, matematičar i astronom. Jedan od najznačajnijih znanstvenika u povijesti. Završio je studij u Cambridgeu (1661. – 1665.). Nakon završetka studija, kada se zbog kuge sveučilište zatvorilo, vratio se kući u Woolsthorpe, gdje je samostalno učinio niz temeljnih otkrića iz mehanike i matematike (1665. – 1667.), premda je većinu objavio tek nakon dvadesetak godina.</string>
+    <string name="tesla">Nikola Tesla</string>
+    <string name="tesla_dob">1856. - 1943.</string>
+    <string name="tesla_info">Nikola Tesla (Smiljan, 10. srpnja 1856. – New York, 7. siječnja 1943.) bio je hrvatski i američki elektroinženjer i izumitelj podrijetlom Srbin iz Hrvatske.[1] Rođen u Lici, ali je gotovo cijeli život radio u SAD-u, gdje je i ostvario sve izume. Gimnaziju je pohađao u Gospiću, potom u Rakovcu kraj Karlovca, gdje je maturirao. Na Visoku tehničku školu u Grazu upisao se 1875. Godine 1881. radio je u Središnjem telegrafskom uredu u Budimpešti, a potom u Telefonskoj centrali, u kojoj je načinio niz tehničkih poboljšanja.</string>
+    <string name="etDescription">Uredi opis</string>
+    <string name="etDescriptionHint">Unesite novi opis</string>
+    <string name="top">TOP 3</string>
+</resources>
