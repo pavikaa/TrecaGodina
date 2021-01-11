@@ -60,7 +60,7 @@ DELETE FROM Kupac WHERE MONTH(DatumRođenja)=4
 
 --Zadatak 3.
 SELECT COUNT(DISTINCT OIBKupca)
-FROM Kupac GROUP BY YEAR(DatumRođenja)
+FROM Kupuje GROUP BY YEAR(DatumKupnje)
 
 SELECT YEAR(k.DatumKupnje),MAX(p.Cijena)
 FROM Kupuje AS k, Proizvod as p
