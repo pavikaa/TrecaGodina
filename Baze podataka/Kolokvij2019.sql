@@ -47,7 +47,7 @@ INSERT INTO Proizvod VALUES ('1234567891','ImeProizvoda','ABCD','123','614.25','
 
 UPDATE Proizvođač
 SET Naziv=SUBSTRING (Naziv,1,3)
-WHERE GodinaOsnutka>1901 AND ZemljaPorijekla='Japan'
+WHERE GodinaOsnutka BETWEEN 1901 AND 2000 AND ZemljaPorijekla='Japan'
 
 UPDATE Proizvod
 SET Kategorija=99
