@@ -135,21 +135,61 @@ ALTER TABLE Let ADD VrstaLeta CHAR(3)
 ALTER TABLE Let ADD CONSTRAINT checkVrstaLeta CHECK (VrstaLeta IN('INT','NAT'))
 ALTER TABLE Let DROP CONSTRAINT checkVrstaLeta
 ALTER TABLE Aerodrom ADD CONSTRAINT fkAerodromIDDrzave FOREIGN KEY (sifraDrzave) REFERENCES Država(IDDržave)
-
 --Zadatak 2.
 DELETE FROM Let WHERE YEAR(DatumPolaska)=2013 AND MONTH(DatumPolaska)=6
+
 UPDATE Avion
 SET Model='747'
-WHERE 
+WHERE Model LIKE '73%'
 
+INSERT INTO Aerodrom VALUES ('123456789123','Ime1','123ABC','1000')
 
+UPDATE Država
+SET IDDržave='111999'
+WHERE LEN(Naziv)=(SELECT MAX(LEN(Naziv)) FROM Država);
 
+--Zadatak 3.
+SELECT a.Proizvođač,a.Model,AVG(l.BrojPutnika)
+FROM Avion AS a, Let AS l
+WHERE a.IDAviona=l.IDAviona AND a.Proizvođač LIKE '%g'
+GROUP BY a.IDAviona
 
+SELECT l.IDLeta,d.Naziv
+FROM Let AS l, Država AS d, Aerodrom AS a
+WHERE l.AerodromU=a.IDAerodroma AND a.sifraDrzave=d.IDDržave AND l.BrojPutnika>(SELECT AVG(BrojPutnika) FROM Let) 
 
+SELECT COUNT(DISTINCT IDAviona)
+FROM Let
+GROUP BY YEAR(DatumPolaska)
 
+CREATE VIEW pogled2
+AS
+SELECT av.Proizvođač,av.Model,a.Naziv,l.DatumPolaska,l.BrojPutnika
+FROM Avion AS av, Let AS l, Aerodrom AS a
+WHERE l.IDAviona=av.IDAviona AND l.AerodromIz=a.IDAerodroma
+SELECT * FROM pogled2
 
+--Zadatak 4.
+CREATE TRIGGER okidac2 ON Let FOR INSERT
+AS
+DECLARE @BrojPutnika INT
+DECLARE @IDLeta CHAR(8)
+DECLARE @IDAviona CHAR(10)
+SET @BrojPutnika=(SELECT BrojPutnika FROM inserted)
+SET @IDLeta=(SELECT IDLeta FROM inserted)
+SET @IDAviona=(SELECT IDAviona FROM inserted)
+IF(@BrojPutnika<0 OR @BrojPutnika>200)
+UPDATE Let
+SET BrojPutnika='0'
+WHERE IDLeta=@IDLeta;
+UPDATE Let
+SET IDAviona=UPPER(IDAviona)
+WHERE IDLeta=@IDLeta;
 
-
+INSERT INTO Let VALUES ('ABCDEFGH','Ime1','Ime2','01/01/2000','13','ABaDEFGHAA','INT')
+INSERT INTO Let VALUES ('ABCDEFGE','Ime3','Ime4','01/01/2000','201','ABaDEFGHAB','INT')
+INSERT INTO Let VALUES ('ABCDEFGS','Ime5','Ime6','01/01/2000','-2','ABaDEFGHAC','INT')
+SELECT * FROM Let
 --Zadatak 4. 2018 B
 CREATE PROCEDURE procedura (@datum DATETIME)
 AS
@@ -160,4 +200,4 @@ ELSE
 SET @output=FORMAT(@datum,'dd.MM.yyyy.');
 PRINT @output
 
-exec procedura '01/03/2013'
+exec procedura '01/03/2011'
